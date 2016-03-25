@@ -1,0 +1,112 @@
+<?php 
+ 
+if (isset($_POST["date2"])) {
+	echo "date2 is set <br> ";
+	echo	$_POST["date2"]."<br>"	;
+}else{
+	echo "N0, date2 is not set <br>";
+}
+
+if (isset($_POST["firstname"])) {
+	echo "firstname is set <br> ";
+	echo	$_POST["firstname"]."<br>"	;
+}else{
+	echo "N0 firstname is not set <br>";
+}
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+https://www.youtube.com/watch?v=V929J6ICl2s
+
+https://formden.com/blog/date-picker
+
+ -->
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>FormDen Example</title>
+  
+
+<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
+<!-- Include jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+</head>
+<body>
+
+
+ 
+ 
+ 
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+ 
+<BR><BR>
+<div style="border: 0px solid red;">
+<form style="border: 2px solid green;" action="" method="post">
+   <div id="date2" class="date2">
+   <input type="text" id="firstname" name="firstname" value="Mickey"><br>
+  <input type="submit" value="Submit">
+</form>
+
+</div>
+ 
+
+<script>
+	$(document).ready(function(){
+		
+		 
+
+		/**
+		https://bootstrap-datepicker.readthedocs.org/en/latest/
+			
+		 * Hebrew translation for bootstrap-datepicker
+		 * Sagie Maoz <sagie@maoz.info>
+		 */
+		
+		 
+		;(function($){
+		  $.fn.datepicker.dates['he'] = {
+		      days: ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת", "ראשון"],
+		      daysShort: ["א", "ב", "ג", "ד", "ה", "ו", "ש", "א"],
+		      daysMin: ["א", "ב", "ג", "ד", "ה", "ו", "ש", "א"],
+		      months: ["ינואר", "פברואר", "מרץ", "אפריל", "מאי", "יוני", "יולי", "אוגוסט", "ספטמבר", "אוקטובר", "נובמבר", "דצמבר"],
+		      monthsShort: ["ינו", "פבר", "מרץ", "אפר", "מאי", "יונ", "יול", "אוג", "ספט", "אוק", "נוב", "דצמ"],
+		      today: "היום",
+		      rtl: true
+		  };
+		}(jQuery));
+
+	 
+		 $('.date2').datepicker({
+			    language: 'he'
+			});
+
+			
+
+		 
+		 
+	})
+	
+	 
+
+</script>
+
+</body>
+
+</html>
+			
+
+		 
+		  
+	
+	  
